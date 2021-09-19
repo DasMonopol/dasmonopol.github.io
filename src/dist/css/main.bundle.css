@@ -31,9 +31,30 @@ html {
     background-size: 400% 100%;
 	
     animation: BackgroundGradientAnimation 30s ease infinite;
+	-webkit-animation: BackgroundGradientAnimation 30s ease infinite;
+	-o-animation: BackgroundGradientAnimation 30s ease infinite;
+	-moz-animation: BackgroundGradientAnimation 30s ease infinite;
 }
 
 @keyframes BackgroundGradientAnimation {
+	0%{background-position:90% 0%}
+	50%{background-position:11% 100%}
+	100%{background-position:90% 0%}
+}
+
+@-webkit-keyframes BackgroundGradientAnimation {
+	0%{background-position:90% 0%}
+	50%{background-position:11% 100%}
+	100%{background-position:90% 0%}
+}
+
+@-o-keyframes BackgroundGradientAnimation {
+	0%{background-position:90% 0%}
+	50%{background-position:11% 100%}
+	100%{background-position:90% 0%}
+}
+
+@-moz-keyframes BackgroundGradientAnimation {
 	0%{background-position:90% 0%}
 	50%{background-position:11% 100%}
 	100%{background-position:90% 0%}
@@ -5185,6 +5206,7 @@ a.dropdown-item.is-active,button.dropdown-item.is-active {
 	flex-direction: column;
 	max-height: calc(100vh - 40px);
 	overflow: hidden;
+	overflow-y: visible;
 	-ms-overflow-y: visible;
 }
 
