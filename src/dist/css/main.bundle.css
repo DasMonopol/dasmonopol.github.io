@@ -11,6 +11,7 @@ https://flickity.metafizzy.co
 
 	--color-background-gradient-001: #8854d0;
 	--color-background-gradient-002: #eb3b5a;
+	--color-background-gradient-003:#7d5fff;
 }
 
 html {
@@ -27,7 +28,7 @@ html {
 
 	/* BACKGROUND GRADIENT ANIMATION */
 
-    background: linear-gradient(213deg, var(--color-background-gradient-001), var(--color-background-gradient-002));
+    background: linear-gradient(213deg, var(--color-background-gradient-001), var(--color-background-gradient-002), var(--color-background-gradient-003));
     background-size: 400% 100%;
 	
     animation: BackgroundGradientAnimation 30s ease infinite;
@@ -291,7 +292,7 @@ a.icon>strong {
 	user-select: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
-	background-color: rgba(10,10,10,.2);
+	background-color: var(--color-background-gradient-002);
 	border: none;
 	border-radius: 290486px;
 	cursor: pointer;
@@ -380,7 +381,10 @@ a.icon>strong {
 	width: 1em;
 }
 
-.hero-video,.image.is-1by1 .has-ratio,.image.is-1by1 img,.image.is-1by2 .has-ratio,.image.is-1by2 img,.image.is-1by3 .has-ratio,.image.is-1by3 img,.image.is-2by1 .has-ratio,.image.is-2by1 img,.image.is-2by3 .has-ratio,.image.is-2by3 img,.image.is-3by1 .has-ratio,.image.is-3by1 img,.image.is-3by2 .has-ratio,.image.is-3by2 img,.image.is-3by4 .has-ratio,.image.is-3by4 img,.image.is-3by5 .has-ratio,.image.is-3by5 img,.image.is-4by3 .has-ratio,.image.is-4by3 img,.image.is-4by5 .has-ratio,.image.is-4by5 img,.image.is-5by3 .has-ratio,.image.is-5by3 img,.image.is-5by4 .has-ratio,.image.is-5by4 img,.image.is-9by16 .has-ratio,.image.is-9by16 img,.image.is-16by9 .has-ratio,.image.is-16by9 img,.image.is-square .has-ratio,.image.is-square img,.is-overlay,.modal,.modal-background {
+.hero-video,.image.is-1by1 .has-ratio,.image.is-1by1 img,.image.is-1by2 .has-ratio,.image.is-1by2 img,.image.is-1by3 .has-ratio,.image.is-1by3 img,.image.is-2by1 .has-ratio,.image.is-2by1 img,
+.image.is-2by3 .has-ratio,.image.is-2by3 img,.image.is-3by1 .has-ratio,.image.is-3by1 img,.image.is-3by2 .has-ratio,.image.is-3by2 img,.image.is-3by4 .has-ratio,.image.is-3by4 img,.image.is-3by5 .has-ratio,
+.image.is-3by5 img,.image.is-4by3 .has-ratio,.image.is-4by3 img,.image.is-4by5 .has-ratio,.image.is-4by5 img,.image.is-5by3 .has-ratio,.image.is-5by3 img,.image.is-5by4 .has-ratio,.image.is-5by4 img,
+.image.is-9by16 .has-ratio,.image.is-9by16 img,.image.is-16by9 .has-ratio,.image.is-16by9 img,.image.is-square .has-ratio,.image.is-square img,.is-overlay,.modal,.modal-background {
 	bottom: 0;
 	left: 0;
 	position: absolute;
@@ -1464,20 +1468,20 @@ a.box:active {
 }
 
 .button.is-success {
-	background-color: #48c774;
+	background-color: var(--color-background-gradient-002);
 	border-color: transparent;
 	color: #fff;
 }
 
 .button.is-success.is-hovered,.button.is-success:hover {
-	background-color: #3ec46d;
+	background-color: var(--color-font);
 	border-color: transparent;
-	color: #fff;
+	color: var(--color-background-dark);
 }
 
 .button.is-success.is-focused,.button.is-success:focus {
 	border-color: transparent;
-	color: #fff;
+	color: var(--color-background-dark);
 }
 
 .button.is-success.is-focused:not(:active),.button.is-success:focus:not(:active) {
@@ -1485,9 +1489,9 @@ a.box:active {
 }
 
 .button.is-success.is-active,.button.is-success:active {
-	background-color: #3abb67;
+	background-color: var(--color-background-gradient-001);
 	border-color: transparent;
-	color: #fff;
+	color: var(--color-background-dark);
 }
 
 .button.is-success[disabled],fieldset[disabled] .button.is-success {
@@ -2348,6 +2352,11 @@ div.icon-text {
 	width: 128px;
 }
 
+.image.is-256x256 {
+	height: 256px;
+	width: 256px;
+}
+
 .notification {
 	background-color: var(--color-background-dark);
 	border-radius: 5px;
@@ -2943,9 +2952,9 @@ div.icon-text {
 
 .tag:not(body) {
 	align-items: center;
-	background-color: #2d3436;
+	background-color: var(--color-font);
 	border-radius: 4px;
-	color: #4a4a4a;
+	color: var(--color-background-dark);
 	display: inline-flex;
 	font-size: .75rem;
 	height: 2em;
@@ -5208,11 +5217,11 @@ a.dropdown-item.is-active,button.dropdown-item.is-active {
 	overflow: hidden;
 	overflow-y: visible;
 	-ms-overflow-y: visible;
+	background-color: var(--color-background-dark);
 }
 
 .modal-card-foot,.modal-card-head {
 	align-items: center;
-	background-color: #2d3436;
 	display: flex;
 	flex-shrink: 0;
 	justify-content: flex-start;
@@ -5227,11 +5236,11 @@ a.dropdown-item.is-active,button.dropdown-item.is-active {
 }
 
 .modal-card-title {
-	color: #363636;
 	flex-grow: 1;
 	flex-shrink: 0;
 	font-size: 1.5rem;
 	line-height: 1;
+	font-size: xx-large;
 }
 
 .modal-card-foot {
@@ -5246,7 +5255,6 @@ a.dropdown-item.is-active,button.dropdown-item.is-active {
 
 .modal-card-body {
 	-webkit-overflow-scrolling: touch;
-	background-color: #fff;
 	flex-grow: 1;
 	flex-shrink: 1;
 	overflow: auto;
@@ -8213,6 +8221,32 @@ a.panel-block:hover,label.panel-block:hover {
 
 .tile.is-parent {
 	padding: .75rem;
+}
+
+.tile.is-parent:hover {
+	padding: .75rem;
+	animation-name: TitleIsParentHoverAnimation;
+	animation-timing-function: ease-out;	
+	animation-duration: 0.15s;
+	animation-fill-mode: forwards;
+}
+
+.tile.is-parent:not(.tile.tile.is-parent:hover) {
+	padding: .75rem;
+	animation-name: TitleIsParentNotHoverAnimation;
+	animation-timing-function: ease-out;	
+	animation-duration: 0.15s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes TitleIsParentHoverAnimation {
+	0% { transform: scale(1); }
+	100% { transform: scale(1.05); }
+}
+
+@keyframes TitleIsParentNotHoverAnimation {
+	0% { transform: scale(1.05); }
+	100% { transform: scale(1); }
 }
 
 .tile.is-vertical {
